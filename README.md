@@ -100,15 +100,24 @@ ssh -i my-ec2-key.pem ec2-user@3.110.xxx.xxx
 
 ```
 
-Important Concept
+# Important Concept
+
 Public key → stored in EC2 (authorized_keys)
+
 Private key → used from your system
+
 SSH matches both keys for secure login
-Common Issues
+
+# Common Issues
+
 Permission denied → check .pem permissions
 Connection timeout → check Security Group (Port 22)
 Invalid key → ensure correct key copied
-Final Result
+
+# Final Result
+
 EC2 launched without key pair
+
 SSH key generated manually
+
 Secure connection established from local machine
