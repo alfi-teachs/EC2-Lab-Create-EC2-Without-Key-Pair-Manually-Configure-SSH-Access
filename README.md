@@ -48,21 +48,14 @@ ls
 
 👉 Expected files:
 
-id_rsa
-id_rsa.pub
+- id_rsa
+- id_rsa.pub
 
 # Step 5: Add Public Key to authorized_keys
 
 ```bash
-cat id_rsa.pub >> authorized_keys
+mv id_rsa.pub authorized_keys
 ```
-
-👉 If file does not exist:
-
-```bash
-cp id_rsa.pub authorized_keys
-```
-
 # Step 6: Set Permissions
 
 ```bash
@@ -84,8 +77,9 @@ cat id_rsa
 # Step 8: Save Key on Local Machine
 Open Notepad
 Paste key
+
 Save as:
-my-ec2-key.pem
+- my-ec2-key.pem
 
 # Step 9: Set Permission on Key
 
