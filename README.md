@@ -26,7 +26,9 @@ Click Connect
 Step 3: Generate SSH Key Inside EC2
 
 '''bash
+
 ssh-keygen -t rsa -b 2048
+
 '''
 
 Press Enter for all prompts.
