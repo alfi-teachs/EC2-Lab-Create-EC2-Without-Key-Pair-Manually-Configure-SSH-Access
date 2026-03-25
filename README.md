@@ -1,4 +1,5 @@
 # EC2-Lab-Create-EC2-Without-Key-Pair-Manually-Configure-SSH-Access
+
 Create an EC2 instance without a key pair, generate SSH keys inside the instance, and securely connect from your local machine.
 
 # What you will learn
@@ -28,25 +29,22 @@ Choose EC2 Instance Connect
 Click Connect
 
 # Step 3: Generate SSH Key Inside EC2
-
-''' 
-bash
-
+```bash
 ssh-keygen -t rsa -b 2048
 
-'''
+```
 
 👉 Press Enter for all prompts
 
 # Step 4: Verify Keys
 
-'''bash
+```bash
 cd ~/.ssh
-'''
+```
 
-'''bash
+```bash
 ls
-'''
+```
 
 👉 Expected files:
 
@@ -55,31 +53,31 @@ id_rsa.pub
 
 # Step 5: Add Public Key to authorized_keys
 
-'''bash
+```bash
 cat id_rsa.pub >> authorized_keys
-'''
+```
 
 👉 If file does not exist:
 
-'''bash
+```bash
 cp id_rsa.pub authorized_keys
-'''
+```
 
 # Step 6: Set Permissions
 
-'''bash
+```bash
 chmod 700 ~/.ssh
-'''
+```
 
-'''bash
+```bash
 chmod 600 ~/.ssh/authorized_keys
-'''
+```
 
 # Step 7: Copy Private Key
 
-'''bash
+```bash
 cat id_rsa
-'''
+```
 
 👉 Copy the full output
 
@@ -91,22 +89,22 @@ my-ec2-key.pem
 
 # Step 9: Set Permission on Key
 
-'''bash
+```bash
 chmod 400 my-ec2-key.pem
-'''
+```
 
 # Step 10: Connect to EC2 from Local Machine
 
-'''bash
+```bash
 ssh -i my-ec2-key.pem ec2-user@<EC2-PUBLIC-IP>
-'''
+```
 
 👉 Example:
 
-'''bash
+```bash
 ssh -i my-ec2-key.pem ec2-user@3.110.xxx.xxx
 
-'''
+```
 
 Important Concept
 Public key → stored in EC2 (authorized_keys)
