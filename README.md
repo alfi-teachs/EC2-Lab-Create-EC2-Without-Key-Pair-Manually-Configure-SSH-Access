@@ -11,14 +11,15 @@ Create an EC2 instance without a key pair, generate SSH keys inside the instance
 
 # Step 1: Launch EC2 Instance (No Key Pair)
 Go to AWS Console → EC2 → Launch Instance
-Configure:
-Name: No-Key-EC2
-AMI: Amazon Linux
-Instance type: t2.micro
-Key Pair: Proceed without key pair
+- Configure:
+- Name: No-Key-EC2
+- AMI: Amazon Linux
+- Instance type: t2.micro
+- Key Pair: Proceed without key pair
+- 
 Network Settings:
-Allow SSH (Port 22) from your IP
-Click Launch Instance
+- Allow SSH (Port 22) from your IP
+- Click Launch Instance
 
 # Step 2: Connect Using EC2 Instance Connect
 Select your instance
@@ -28,8 +29,11 @@ Click Connect
 
 # Step 3: Generate SSH Key Inside EC2
 
-''' bash
+''' 
+bash
+
 ssh-keygen -t rsa -b 2048
+
 '''
 
 👉 Press Enter for all prompts
