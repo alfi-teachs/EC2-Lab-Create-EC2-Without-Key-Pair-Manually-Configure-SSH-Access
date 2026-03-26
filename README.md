@@ -34,6 +34,11 @@ ssh-keygen -t rsa -b 2048
 
 ```
 
+```bash
+ssh-keygen -p -m PEM -f id_rsa
+
+```
+
 👉 Press Enter for all prompts
 
 # Step 4: Verify Keys
