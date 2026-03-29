@@ -71,6 +71,13 @@ chmod 700 ~/.ssh
 
 ```bash
 chmod 600 ~/.ssh/authorized_keys
+
+```
+
+```bash
+
+chown -R ec2-user:ec2-user /home/ec2-user/.ssh
+
 ```
 
 # Step 7: Copy Private Key
