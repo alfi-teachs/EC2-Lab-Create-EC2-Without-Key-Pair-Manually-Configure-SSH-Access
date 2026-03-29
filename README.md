@@ -30,11 +30,13 @@ Click Connect
 
 # Step 3: Generate SSH Key Inside EC2
 ```bash
-ssh-keygen -t rsa -b 2048
+
+ssh-keygen -t rsa -b 2048 -f /home/ec2-user/.ssh/id_rsa
 
 ```
 
 ```bash
+
 ssh-keygen -p -m PEM -f id_rsa
 
 ```
